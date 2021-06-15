@@ -33,13 +33,11 @@ class MaxBinaryHeap{
 
   create(arr){
     this.values.push(arr[0])
-    this.insert(20)
+
     for(let i=1; i<arr.length; i++){
       this.insert(arr[i])
     }
   }
-  //[100, 55, 45, 35, 40, 30, 20, 10, 25, 20,  1,  3, 5]
-  //[5, 55, 45, 35, 40, 30, 20, 10, 25, 20,  1,  3]
 
   sinkDown(){
     let idx =0
@@ -90,7 +88,8 @@ class MaxBinaryHeap{
 }
 
 let mbh = new MaxBinaryHeap();
-const inputArray = [10,20,30,25,5,40,35]
+const inputArray = [10,20,30,25,5,40,35];
+let sortedArray =[];
 mbh.create(inputArray);
 // mbh.insert(55)
 // mbh.insert(100)
@@ -98,10 +97,11 @@ mbh.create(inputArray);
 // mbh.insert(3)
 // mbh.insert(45)
 console.log(mbh)
-mbh.extractMax()
-mbh.extractMax()
-mbh.extractMax()
-mbh.extractMax()
-mbh.extractMax()
-mbh.extractMax()
+sortedArray.push(mbh.extractMax());
+sortedArray.push(mbh.extractMax());
+sortedArray.push(mbh.extractMax());
+sortedArray.push(mbh.extractMax());
+sortedArray.push(mbh.extractMax());
+sortedArray.push(mbh.extractMax());
 console.log(mbh)
+console.log(sortedArray)
